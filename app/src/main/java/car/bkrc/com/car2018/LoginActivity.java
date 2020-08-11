@@ -85,14 +85,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void findViews() {
-        device_edit = (EditText) findViewById(R.id.deviceid);
-        login_edit = (EditText) findViewById(R.id.loginname);
-        passwd_edit = (EditText) findViewById(R.id.loginpasswd);
-        bt_reset = (Button) findViewById(R.id.reset);
-        bt_connect = (Button) findViewById(R.id.connect);
-        rememberbox = (CheckBox) findViewById(R.id.remember);
+        device_edit =  findViewById(R.id.deviceid);
+        login_edit = findViewById(R.id.loginname);
+        passwd_edit =  findViewById(R.id.loginpasswd);
+        bt_reset =  findViewById(R.id.reset);
+        bt_connect =  findViewById(R.id.connect);
+        rememberbox =  findViewById(R.id.remember);
         rememberbox.setChecked(false);
-        transmitswitch = (Switch) findViewById(R.id.transmit_way);
+        transmitswitch =  findViewById(R.id.transmit_way);
 
         bt_reset.setOnClickListener(this);
         bt_connect.setOnClickListener(this);

@@ -76,14 +76,14 @@ public class FirstActivity extends AppCompatActivity {
             Transparent.showLoadingMessage(this, "加载中", false);//启动旋转效果的对话框，实现usb的识别和获取
         }
 
-        mToolbar = (TitleToolbar) findViewById(R.id.toolbar);//使用标题栏
+        mToolbar =  findViewById(R.id.toolbar);//使用标题栏
         setSupportActionBar(mToolbar);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);//使用viewPager实现页面滑动效果
+        viewPager =  findViewById(R.id.viewpager);//使用viewPager实现页面滑动效果
         viewPager.setOffscreenPageLimit(3);
 
         //接下来与底部导航栏有关
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView =  findViewById(R.id.bottomNavigation);
 
         int[] image = {R.drawable.ic_mic_black_24dp, R.drawable.ic_favorite_black_24dp,
                 R.drawable.ic_book_black_24dp, R.drawable.github_circle};
@@ -188,14 +188,24 @@ public class FirstActivity extends AppCompatActivity {
             case R.id.clear_coded_disc:
                 Connect_Transport.clear();
                 break;
+
+                //全自动
             case R.id.full_automatic:
+                //要编写的路径和代码，具体到前进后退，开启，使用代码等，格式和下面的代码类似。
+                //大部分功能在connect_transport中，想要拓展可以自己创建新类或新建内部类
+                //下面几行示例代码可删除，Toast不建议删除，方便观察
+                //如出错可个人添加log观看log日志查错
                 FirstActivity.Connect_Transport.TYPE = 0xAA;
                 FirstActivity.Connect_Transport.MAJOR = 0xA0;
                 FirstActivity.Connect_Transport.send();
                 FirstActivity.Connect_Transport.yanchi(300);
                 FirstActivity.Connect_Transport.send();
+
                 Toast.makeText(FirstActivity.this, "全自动", Toast.LENGTH_SHORT).show();
                 break;
+
+
+
             case android.R.id.home:
                 finish();
                 break;
@@ -335,7 +345,7 @@ public class FirstActivity extends AppCompatActivity {
             String action = intent.getAction();
             if (ACTION_USB_PERMISSION.equals(action)) {
                 synchronized (this) {
-                    UsbDevice usbDevice = (UsbDevice) intent.getParcelableExtra(UsbManager.EXTRA_DEVICE);
+                    UsbDevice usbDevice =  intent.getParcelableExtra(UsbManager.EXTRA_DEVICE);
                     if (intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false)) {
                         //user choose YES for your previously popup window asking for grant perssion for this usb device
                         if (null != usbDevice) {

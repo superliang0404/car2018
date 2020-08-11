@@ -29,8 +29,8 @@ public class InfrareAdapter extends RecyclerView.Adapter<InfrareAdapter.ViewHold
         public ViewHolder(View view) {
             super(view);
             InfrareView = view;
-            InfrareImage = (ImageView) view.findViewById(R.id.infrared_image);
-            InfrareName = (TextView) view.findViewById(R.id.infrared_name);
+            InfrareImage =  view.findViewById(R.id.infrared_image);
+            InfrareName =  view.findViewById(R.id.infrared_name);
         }
     }
 
@@ -308,16 +308,16 @@ public class InfrareAdapter extends RecyclerView.Adapter<InfrareAdapter.ViewHold
         public void handleMessage(Message msg) {
             short [] li=StringToBytes(lic_item[msg.what]);
             data[0] = 0x20;
-            data[1] = (short) (li[0]);
-            data[2]=(short) (li[1]);
-            data[3]=(short) (li[2]);
-            data[4]=(short) (li[3]);
+            data[1] = (li[0]);
+            data[2]= (li[1]);
+            data[3]= (li[2]);
+            data[4]= (li[3]);
             FirstActivity.Connect_Transport.infrared_stereo(data);
             data[0] = 0x10;
-            data[1] = (short) (li[4]);
-            data[2]=(short) (li[5]);
-            data[3]=(short) (li[6]);
-            data[4]=(short) (li[7]);
+            data[1] = (li[4]);
+            data[2] = (li[5]);
+            data[3] = (li[6]);
+            data[4] = (li[7]);
             FirstActivity.Connect_Transport.infrared_stereo(data);
         };
     };

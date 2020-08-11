@@ -22,12 +22,12 @@ class TransparentDialog extends Dialog {
 	}
 
 	public void setMessage(String message) {
-		TextView msgView = (TextView)findViewById(R.id.transparent_message);
+		TextView msgView = findViewById(R.id.transparent_message);
 		msgView.setText(message);
 	}
 	
 	public void setImage(Context ctx, int resId) {
-		ImageView image = (ImageView)findViewById(R.id.transparent_image);
+		ImageView image = findViewById(R.id.transparent_image);
 		image.setImageResource(resId);
 		
 		if(resId==R.drawable.transparent_spinner) {

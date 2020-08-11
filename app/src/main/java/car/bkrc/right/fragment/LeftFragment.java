@@ -46,13 +46,13 @@ public class LeftFragment extends Fragment implements View.OnClickListener{
             view = inflater.inflate(R.layout.left_fragment_mobilephone,container,false);
 
 
-        image_show =(ImageView)view.findViewById(R.id.img);
-        showip =(TextView) view.findViewById(R.id.showip);
+        image_show =view.findViewById(R.id.img);
+        showip = view.findViewById(R.id.showip);
         image_show.setOnTouchListener(new ontouchlistener1());
 
-        state = (Button) view.findViewById(R.id.state);
-        control = (Button)view.findViewById(R.id.control);
-        clear_coded_disc =(Button) view.findViewById(R.id.clear_coded_disc);
+        state =  view.findViewById(R.id.state);
+        control = view.findViewById(R.id.control);
+        clear_coded_disc = view.findViewById(R.id.clear_coded_disc);
 
         state.setOnClickListener(this);
         control.setOnClickListener(this);

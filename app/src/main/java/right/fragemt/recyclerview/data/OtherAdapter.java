@@ -35,7 +35,7 @@ import car.bkrc.com.car2018.R;
 import car.bkrc.right.fragment.LeftFragment;
 import car2017_demo.RGBLuminanceSource;
 
-public class OtherAdapter extends RecyclerView.Adapter<OtherAdapter.ViewHolder> {
+public class  OtherAdapter extends RecyclerView.Adapter<OtherAdapter.ViewHolder> {
 
     private List<Other_Landmark> mOtherLandmarkList;
     Context context = null;
@@ -48,8 +48,8 @@ public class OtherAdapter extends RecyclerView.Adapter<OtherAdapter.ViewHolder> 
         public ViewHolder(View view) {
             super(view);
             InfrareView = view;
-            OtherImage = (ImageView) view.findViewById(R.id.landmark_image);
-            OtherName = (TextView) view.findViewById(R.id.landmark_name);
+            OtherImage =  view.findViewById(R.id.landmark_image);
+            OtherName =  view.findViewById(R.id.landmark_name);
         }
     }
 

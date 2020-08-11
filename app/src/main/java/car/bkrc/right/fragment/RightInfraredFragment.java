@@ -66,14 +66,14 @@ public class RightInfraredFragment extends Fragment {
       //  collapsingToolbar.setTitle("红外控制");
        // Glide.with(this).load(R.mipmap.bkrc_logo).into(fruitImageView);
 
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        RecyclerView recyclerView =  view.findViewById(R.id.recycler_view);
         recyclerView.setNestedScrollingEnabled(false);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(manager);
         adapter = new InfrareAdapter(InfraredList,getActivity());
         recyclerView.setAdapter(adapter);
 
-        return view;
+        return  view;
     }
 
     private void initInfrared() {

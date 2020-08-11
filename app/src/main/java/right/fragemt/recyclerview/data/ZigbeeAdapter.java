@@ -36,8 +36,8 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
         public ViewHolder(View view) {
             super(view);
             zigbeeView = view;
-            zigbeeImage = (ImageView) view.findViewById(R.id.landmark_image);
-            zigbeeName = (TextView) view.findViewById(R.id.landmark_name);
+            zigbeeImage =  view.findViewById(R.id.landmark_image);
+            zigbeeName =  view.findViewById(R.id.landmark_name);
         }
     }
 
@@ -591,10 +591,10 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
         dg_Builder.setTitle("数码管显示");
         dg_Builder.setView(view);
         // 下拉列表
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
-        final EditText editText1 = (EditText) view.findViewById(R.id.editText1);
-        final EditText editText2 = (EditText) view.findViewById(R.id.editText2);
-        final EditText editText3 = (EditText) view.findViewById(R.id.editText3);
+        Spinner spinner =  view.findViewById(R.id.spinner);
+        final EditText editText1 =  view.findViewById(R.id.editText1);
+        final EditText editText2 =  view.findViewById(R.id.editText2);
+        final EditText editText3 =  view.findViewById(R.id.editText3);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 context, android.R.layout.simple_spinner_item, itmes);
         spinner.setAdapter(adapter);

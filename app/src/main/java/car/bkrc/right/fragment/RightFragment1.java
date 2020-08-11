@@ -440,16 +440,16 @@ public class RightFragment1 extends Fragment {
 
     private void control_init()
     {
-        Data_show =(TextView) view.findViewById(R.id.rvdata);
-        speededit =(EditText)view.findViewById(R.id.speed_data);
-        coded_discedit =(EditText)view.findViewById(R.id.coded_disc_data);
-        angle_dataedit =(EditText)view.findViewById(R.id.angle_data);
+        Data_show = view.findViewById(R.id.rvdata);
+        speededit =view.findViewById(R.id.speed_data);
+        coded_discedit =view.findViewById(R.id.coded_disc_data);
+        angle_dataedit =view.findViewById(R.id.angle_data);
 
-        up_bt =(ImageButton) view.findViewById(R.id.up_button);
-        blew_bt =(ImageButton) view.findViewById(R.id.below_button);
-        stop_bt =(ImageButton) view.findViewById(R.id.stop_button);
-        left_bt =(ImageButton) view.findViewById(R.id.left_button);
-        right_bt =(ImageButton) view.findViewById(R.id.right_button);
+        up_bt = view.findViewById(R.id.up_button);
+        blew_bt = view.findViewById(R.id.below_button);
+        stop_bt = view.findViewById(R.id.stop_button);
+        left_bt = view.findViewById(R.id.left_button);
+        right_bt = view.findViewById(R.id.right_button);
 
         up_bt.setOnClickListener(new onClickListener2());
         blew_bt.setOnClickListener(new onClickListener2());
